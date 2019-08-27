@@ -54,17 +54,9 @@ Page({
 
   bind_activation:function(){
     var that = this;
-    wx.request({
-      url: a.globalData.api + '&r=activation.bind_openid',
-      data: {
-        'goodsid': that.data.goodsid,
-        'sn': that.data.sn,
-        'openid':wx.getStorageSync('openid')
-      },
-      success: function (res) {
-
-      }
-    })
+    e.get("activation/bind_openid", {'sn':that.data.sn}, function (e) {
+       console.log(e);
+    });
 
   },
 
