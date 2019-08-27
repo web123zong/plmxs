@@ -1,0 +1,60 @@
+/* pages/activation/detail/detail.wxss */
+image{
+  height: 100%;
+  width: 100%;
+}
+.padding-xs{
+  padding: 25rpx;
+  box-sizing: border-box;
+  display: block;
+}
+.padding-xs view{
+  display: inline-block;
+  border-radius: 25rpx;
+}
+swiper{
+  padding:20rpx;
+}
+.top,.bottom{
+  font-size: 24rxp;
+  vertical-align: middle;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 0rpx 16rpx;
+  height: 48rpx;
+  font-family: helvetica Neue, Helvetica, sans-serif;
+  white-space: nowrap;
+}
+
+.top{
+  background-color:	#1E90FF;
+  color: white;
+}
+
+.bottom{
+  background-color:	#708090;
+  color: white;
+}
+.bind{
+  width: 90%;
+  padding:10rpx;
+  margin-top: 40rpx;
+}
+.goods_content{
+  color: #fff;
+  padding: 24rpx;
+  font-size: 35rpx;
+}
+
+.content{
+  display: block;
+  margin-top: 50rpx;
+  border-radius: 25rpx;
+  border: 2rpx solid rgb(143, 143, 143);
+  background-color: rgb(143, 143, 143);
+  width: 90%;
+  margin-left: 5%;
+}

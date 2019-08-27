@@ -1,0 +1,24 @@
+<!--pages/activation/index/index.wxml-->
+<view id="pages">
+  <view id="title">好车灯不将就</view>
+  <view id="honorific">
+    <view class="text">亲爱的客户:</view>
+  </view>
+  <view id="content">
+    感谢您购买普罗米修斯好车灯，为了更好保障您的合法权益，请点击下方“产品激活”按钮扫描灯体二维码，验证您所购买的产品是否为原装正品，并激活您的LED大灯产品质保；如果您已激活产品，可点击质保查询按钮查看质保详情。再次感谢您对普罗米修斯好车灯产品的信任与支持。
+  </view>
+  <view class="scancode">
+    <button class='btn2' bindtap="btn_scanCode">
+      <image class='btnImg' src='../../../static/images/scan.png'></image>
+      <view>扫码激活</view>
+    </button>
+  </view>
+  <view class="search_content">
+    <view class="text">如扫码无法识别，可输入编码查询或激活</view>
+    <input class="search" name="search" placeholder="请输入ID进行质保激活" value="{{sn}}" bindinput="sn"></input>
+  </view>
+  <view>
+    <button class="btn1 top" bindtap="btn_SubmitCode">点击查询</button>
+    <button class="btn1 botton">我的质保记录</button>
+  </view>
+</view>

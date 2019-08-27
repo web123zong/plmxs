@@ -1,0 +1,50 @@
+<import src="/utils/wxParse/wxParse.wxml"></import>
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{piclist}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" width="355" height="150" />
+    </swiper-item>
+  </block>
+</swiper>
+<view class="padding-xs">
+  <text>商品名称：{{title}}</text>
+</view>
+<view class="padding-xs">
+  <text>商品价格：￥{{marketprice}}</text>
+</view>
+<view class="padding-xs">
+  <view wx:if="{{goods_status==1}}">商品状态：
+    <view class="top">上架</view>
+  </view>
+  <view wx:elif="{{goods_status==0}}">商品状态：
+    <view class="bottom">下架</view>
+  </view>
+</view>
+<view class="padding-xs">
+  <block wx:if="{{status == 0}}">
+    <text>激活时间：未激活</text>
+  </block>
+  <block wx:else>
+    <text>激活时间：{{usetime}}</text>
+  </block>
+</view>
+<view class="padding-xs">
+  <block wx:if="{{status == 0}}">
+    <text>质保失效时间：未激活</text>
+  </block>
+  <block wx:else>
+    <text>质保失效时间：{{scraptime}}</text>
+  </block>
+</view>
+<view wx:if="{{status == 0}}">
+  <button type="primary" class="bind" bindtap="bind_activation">立即绑定激活</button>
+</view>
+
+<view class="content">
+  <view class="goods_content">
+    商品详情
+  </view>
+  <view class="wxParse">
+    <template is="wxParse" data="{{wxParseData:wxParseData.nodes}}"></template>
+  </view>
+</view>
