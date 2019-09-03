@@ -6,8 +6,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    goodsid: '199',
-    sn: 'DQ20190821152850811410',
+    goodsid: '',
+    sn: '',
     indicatorDots: false,
     autoplay: true,
     interval: 5000,
@@ -24,8 +24,6 @@ Page({
     that.setData({
       goodsid: options.goodsid,
       sn: options.sn
-      // goodsid: '199',
-      // sn: 'DQ20190821152850811410'
     })
 
     wx.request({
@@ -55,7 +53,17 @@ Page({
   bind_activation:function(){
     var that = this;
     e.get("activation/bind_openid", {'sn':that.data.sn}, function (e) {
-       console.log(e);
+       if(e.data.code==1){
+        wx.showToast({
+          title: '激活成功',
+          icon:'success'
+        })
+         setTimeout(function () {
+           wx.navigateTo({
+             url: 'activation/pages/index/index'
+           })
+         }, 1500)
+       }
     });
 
   },

@@ -1,0 +1,31 @@
+<view class='page'>
+  <view class='flex-x-center flex-pack-justify intergral-title'>
+    <view class='flex-col intergral-total'>
+      <text style='color: #e90044;'>{{list.credit}}</text>
+      <text>积分总额</text>
+    </view>
+    <view class='flex-y-center'>
+      <navigator url='../integral/index' class='go-store-btn'>积分商城</navigator>
+    </view>
+  </view>
+  <view class='intergral-items' wx:for="{{record}}">
+
+    <view class='intergral-item flex-x-center flex-pack-justify'>
+      <view class='flex-col'>
+        <text>{{item.desc}}</text>
+        <text class='intergral-time'>{{item.create_time}}</text>
+      </view>
+      <view class='flex-y-center '>
+        <text class='reduce' wx:if="{{item.type == 2}}">-{{item.money}}</text>
+        <text class='addmoney' wx:if="{{item.type == 1}}">+{{item.money}}</text>
+      </view>
+
+      <view class='noshowdata' wx:if="{{noshowdata == 1}}">
+        暂时没有更多数据了！
+      </view>
+    </view>
+  </view>
+  <view class='nodata flex-col flex-x-center flex-y-center' wx:if="{{isbottom}}">
+      <view style='color:#d2d2d2;font-size:12pt;padding-top:20rpx;' class='{{page==1?"isfirst-nodata":""}}'>{{page==1?'暂无相关数据':'已拉到底啦!'}}</view>
+    </view>
+</view>

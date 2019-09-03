@@ -19,6 +19,6 @@
   </view>
   <view>
     <button class="btn1 top" bindtap="btn_SubmitCode">点击查询</button>
-    <button class="btn1 botton">我的质保记录</button>
+    <button class="btn1 botton" bindtap="log">我的质保记录</button>
   </view>
 </view>

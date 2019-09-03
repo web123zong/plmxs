@@ -1,0 +1,51 @@
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{swipe}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" width="355" height="150" />
+    </swiper-item>
+  </block>
+</swiper>
+<view class="page" wx:if="{{chooseschool==0}}">
+  <!--顶部输入框-->
+  <view class="docu-search flex-x-center flex-y-center">
+    <view class="docu-input">
+      <view style='width:20%;border-right:1px solid #a3a3a3' class='flex-x-center flex-y-center'>
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" style='margin-right:10rpx'>
+          <view class="picker">{{array[index]}} </view>
+        </picker>
+        <image src='../../../static/images/arow_b.png' style='width:16rpx;height:14rpx;'></image>
+      </view>
+      <view style='width:80%' class='flex-x-center flex-y-center'>
+        <view class='newinput'>
+          <image src="../../../static/images/search2.png" class='search' bindtap='serch'></image>
+          <input type="search" name="keyword" id="keyword" value="" bindinput='serchinput' placeholder="输入商户或地址搜索" />
+        </view>
+        <view bindtap='serch' style='margin-left:1%;font-size:29rpx;'>
+          搜索
+        </view>
+      </view>
+    </view>
+  </view>
+  <!--商户列表-->
+  <navigator class="item" url="/store/pages/detail/detail?id={{item.id}}" wx:for="{{list}}" wx:for-index="idx" wx:key="idx">
+    <view class='flex-row flex-x-center school-main'>
+      <view class='school-img'>
+        <image src="{{item.logo}}"></image>
+      </view>
+      <view class='school-intro flex-col'>
+        <view class='school-title flex-row flex-y-center'>
+          <view class='school-h1'>{{item.merchname}}</view>
+          <view class='school-distance'>{{item.distance?'距您'+item.distance+'km':'未知'}}</view>
+        </view>
+        <view class='school-address'>{{item.address}}</view>
+        <view class='school-span flex-row flex-y-center'>
+          <text wx:for="{{item.desc}}">{{item}}</text>
+        </view>
+      </view>
+    </view>
+  </navigator>
+</view>
+
+<view class='nodata flex-col flex-x-center flex-y-center' wx:if="{{isbottom}}">
+  <view style='color:#d2d2d2;font-size:12pt;padding-top:20rpx;text-align=center;' class='{{page==1?"isfirst-nodata":""}}'>{{page==1?'暂无相关数据':'已拉到底啦!'}}</view>
+</view>

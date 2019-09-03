@@ -148,5 +148,12 @@ Page({
   btn_SubmitCode: function() {
     var sn = this.data.sn;
     var res = this.check_sn(sn);
+  },
+
+  log:function(){
+    wx.navigateTo({
+      url: '/log/pages/integral/integral',
+    })
   }
+
 })

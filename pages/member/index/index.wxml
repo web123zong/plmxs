@@ -106,6 +106,13 @@
                 <view class="fui-cell-icon">
                     <text class="icox icox-bargain"></text>
                 </view>
+                <view class="fui-cell-text">商家入驻</view>
+                <view class="fui-cell-remark"></view>
+            </navigator>
+            <navigator class="fui-cell" hoverClass="none" url="/pages/bargain/index/index" wx:if="{{member.bargain}}">
+                <view class="fui-cell-icon">
+                    <text class="icox icox-bargain"></text>
+                </view>
                 <view class="fui-cell-text">砍价首页</view>
                 <view class="fui-cell-remark"></view>
             </navigator>
