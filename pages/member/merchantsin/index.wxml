@@ -1,0 +1,58 @@
+<view class="page">
+  <view>
+    <image mode="widthFix" src="http://pic1.win4000.com/wallpaper/c/53cdd1f7c1f21.jpg" style="width:100%"></image>
+  </view>
+  <form bindsubmit="formSubmit">
+    <view class="form-item">
+      <view class="flex-y-center form-item-list">
+        <input class="item-name" value="商户名称" disabled="true">
+        <text class="xing">*</text>
+        </input>
+        <input placeholder="商户名称" class="flex-1 item-input" name="name"></input>
+      </view>
+      <view class="flex-y-center form-item-list">
+        <input class="item-name" value="主营项目" disabled="true">
+        <text class="xing">*</text>
+        </input>
+        <input placeholder="例如鞋帽、化妆品" class="flex-1 item-input" name="project"></input>
+      </view>
+      <view class="flex-y-center form-item-list">
+        <input class="item-name" value="简单介绍" disabled="true"></input>
+        <textarea placeholder="简单介绍下商户" class="flex-1 item-input" name="intro" style="height:80rpx"></textarea>
+      </view>
+    </view>
+
+    <view class="form-item">
+      <view class="flex-y-center form-item-list">
+        <input class="item-name" value="联系人" disabled="true">
+        <text class="xing">*</text>
+        </input>
+        <input placeholder="您的称呼" class="flex-1 item-input" name="nickname"></input>
+      </view>
+      <view class="flex-y-center form-item-list">
+        <input class="item-name" value="手机号" disabled="true">
+        <text class="xing">*</text>
+        </input>
+        <input placeholder="您的手机号" class="flex-1 item-input" name="mobile"></input>
+      </view>
+      <view class="form-item-list title-ti">请仔细填写联系方式，保证我们能尽快联系到您~</view>
+    </view>
+
+    <view class="form-item">
+      <view class="flex-y-center form-item-list">
+        <input class="item-name" value="账号" disabled="true">
+        <text class="xing">*</text>
+        </input>
+        <input placeholder="账号" class="flex-1 item-input" name="account"></input>
+      </view>
+      <view class="flex-y-center form-item-list">
+        <input class="item-name" value="密码" disabled="true">
+        <text class="xing">*</text>
+        </input>
+        <input placeholder="密码" class="flex-1 item-input" name="password"></input>
+      </view>
+      <view class="form-item-list title-ti">用于登录商户后台，请认真填写</view>
+    </view>
+    <button form-type="submit" class="btn-submit">立即申请入驻</button>
+  </form>
+</view>

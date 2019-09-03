@@ -91,7 +91,8 @@
     "activation/pages/detail/detail",
     "store/pages/index/index",
     "store/pages/detail/detail",
-    "log/pages/integral/integral"
+    "log/pages/integral/integral",
+    "pages/member/merchantsin/index"
   ],
   "window": {
     "backgroundColor": "#fafafa",

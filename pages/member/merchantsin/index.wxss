@@ -1,0 +1,42 @@
+.form-item{
+  background: #fff;
+  margin-top: 20rpx;
+  padding: 0 20rpx;
+}
+.form-item .form-item-list{
+  padding: 15rpx 0;
+  border-bottom: 1px solid #f2f2f2;
+}
+.form-item .form-item-list .item-name{
+  width: 130rpx;
+  color: #333;
+  font-size: 26rpx;
+  position: relative;
+}
+.form-item .form-item-list .item-name .xing{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: red;
+}
+.form-item .form-item-list .item-input{
+  font-size: 26rpx;
+  color: #666;
+  padding-left: 5rpx;
+}
+.form-item .form-item-list:last-child{
+  border-bottom: 0;
+}
+.input-placeholder,.textarea-placeholder{
+  color:#ddd;
+}
+.title-ti{
+  font-size: 22rpx;
+  color: #999;
+}
+.btn-submit{
+  margin:20rpx 30rpx 80rpx;
+  background: #FF7E06;
+  color: #fff;
+  font-size: 30rpx;
+}
