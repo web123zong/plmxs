@@ -35,7 +35,7 @@ page{
 .search-res{
   width: 70%;
   margin: 0 auto;
-  height: 500rpx;
+  /* height: 500rpx; */
   overflow: auto;
 }
 .res-item .item-title{

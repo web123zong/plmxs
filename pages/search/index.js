@@ -12,7 +12,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    s.get("", {}, function (t) {
+    s.get("merch/select_cate_get_goods", {
+      'keyword':'丰田'
+    }, function (t) {
       
     });
   },

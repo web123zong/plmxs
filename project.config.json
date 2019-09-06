@@ -38,7 +38,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 8,
+			"current": 9,
 			"list": [
 				{
 					"id": -1,
@@ -100,6 +100,13 @@
 					"id": -1,
 					"name": "商家入驻",
 					"pathName": "pages/member/merchantsin/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "分类搜索",
+					"pathName": "pages/search/index",
 					"scene": null
 				}
 			]
