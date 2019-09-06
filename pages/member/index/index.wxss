@@ -269,7 +269,7 @@
     position: absolute;
     width: 280rpx;
     height: 120rpx;
-    background: #ff5555;
+    background: #009BFC;
     z-index: 80;
     border-radius: 50%;
     bottom: 0;
@@ -278,7 +278,7 @@
     overflow: hidden;
     transform: scale(10,10);
     transform-origin: center bottom;
-    border: 2px solid #ff5555;
+    border: 2px solid #009BFC;
 }
 
 .fui-cell-group:nth-of-type(1) {

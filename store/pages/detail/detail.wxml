@@ -26,7 +26,7 @@
   </view>
 
   <!-- 预约试听课程 -->
-  <view class='coupons-main' wx:if="{{ishowgoods}}">
+  <!-- <view class='coupons-main' wx:if="{{ishowgoods}}">
     <view class='coupons-title flex-y-center'>
       <text>推荐商品</text>
     </view>
@@ -48,5 +48,5 @@
   </view>
   <view wx:if="{{ishowgoods}}">
   <view style='color:#d2d2d2;font-size:12pt;padding-top:20rpx;text-align: center' class='{{page==1?" isfirst-nodata ":" "}}'>{{page==1?'暂无商品':'已拉到底啦!'}}</view>
-  </view>
+  </view> -->
 </view>

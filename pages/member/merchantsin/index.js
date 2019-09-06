@@ -16,7 +16,17 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-
+    a.get('merch/register_submit', {}, function(e) {
+      wx.showToast({
+        title: e.message,
+        icon:'none'
+      })
+      setTimeout(function() {
+        wx.switchTab({
+          url: '/pages/member/index/index',
+        })
+      }, 1500)
+    })
   },
   // 提交表单
   formSubmit: function(e) {
@@ -39,28 +49,50 @@ Page({
           title: '请先填写联系人',
           icon: 'none'
         })
-        return  
+        return
       case datas.mobile == '':
         wx.showToast({
           title: '请先填写手机号',
           icon: 'none'
         })
-        return   
+        return
       case datas.account == '':
         wx.showToast({
           title: '请先填写账号',
           icon: 'none'
         })
-        return   
+        return
       case datas.password == '':
         wx.showToast({
           title: '请先填写密码',
           icon: 'none'
         })
-        return        
+        return
     }
-    console.log(datas)
+    this.register_submit(datas)
   },
+
+  register_submit: function(e) {
+    a.get('merch/register_submit', {
+      uname: e.account,
+      upass: e.password,
+      realname: e.nickname,
+      mobile: e.mobile,
+      merchname: e.name,
+      salecate: e.project,
+      desc: e.intro
+    }, function(e) {
+      wx.showToast({
+        title: e.message,
+      })
+      setTimeout(function() {
+        wx.navigateTo({
+          url: '/pages/member/index/index'
+        })
+      }, 1500)
+    })
+  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

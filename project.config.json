@@ -38,7 +38,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 7,
+			"current": 8,
 			"list": [
 				{
 					"id": -1,
@@ -86,6 +86,13 @@
 					"id": -1,
 					"name": "质保记录",
 					"pathName": "log/pages/integral/integral",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "商家入驻",
+					"pathName": "pages/member/merchantsin/index",
 					"query": "",
 					"scene": null
 				},

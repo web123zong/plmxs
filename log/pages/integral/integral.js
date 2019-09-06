@@ -8,18 +8,23 @@ Page({
   data: {
     isbottom: false,
     noshowdata: 0,
+    page:1
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var that = this;
     e.get("activation/log", {}, function (e) {
       console.log(e)
       if (e.code == 1) {
         wx.showToast({
           title: '加载成功',
           icon: 'loading'
+        })
+        that.setData({
+          list:e.list
         })
       }
     });
@@ -71,27 +76,18 @@ Page({
 
     var that = this
     var page = that.data.page + 1;
-    console.log(page)
-    
-    app.util.request({
-      url: "entry/wxapp/commission",
-      data: {
-        op: "getIntegralList",
-        page: page
-      },
-      showLoading: !1,
-      success: function (t) {
-        var a = t.data;
-        var newarray = a.data
-        if (newarray.length == 0) {
-          that.setData({
-            isbottom: true,
-          })
-        }
-        "" != a.data && that.setData({
-          record: that.data.record.concat(newarray),
-          page: page
-        });
+    e.get("activation/log", {
+      page:page
+    }, function (e) {
+      console.log(e)
+      if (e.code == 1) {
+        wx.showToast({
+          title: '加载成功',
+          icon: 'loading'
+        })
+        that.setData({
+          list: e.list
+        })
       }
     });
   },

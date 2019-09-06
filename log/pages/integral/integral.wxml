@@ -1,23 +1,15 @@
 <view class='page'>
-  <view class='flex-x-center flex-pack-justify intergral-title'>
-    <view class='flex-col intergral-total'>
-      <text style='color: #e90044;'>{{list.credit}}</text>
-      <text>积分总额</text>
-    </view>
-    <view class='flex-y-center'>
-      <navigator url='../integral/index' class='go-store-btn'>积分商城</navigator>
-    </view>
-  </view>
-  <view class='intergral-items' wx:for="{{record}}">
+  <view class='intergral-items' wx:for="{{list}}">
 
     <view class='intergral-item flex-x-center flex-pack-justify'>
+      <image src="{{item.thumb}}"></image>
       <view class='flex-col'>
-        <text>{{item.desc}}</text>
-        <text class='intergral-time'>{{item.create_time}}</text>
+        <text>{{item.title}}</text>
+        <text class='intergral-time'>激活时间：{{item.usetime}}</text>
+        <text class='intergral-time'>到期时间：{{item.usetime}}</text>
       </view>
       <view class='flex-y-center '>
-        <text class='reduce' wx:if="{{item.type == 2}}">-{{item.money}}</text>
-        <text class='addmoney' wx:if="{{item.type == 1}}">+{{item.money}}</text>
+        <text class='reduce'>价格：{{item.marketprice}}</text>
       </view>
 
       <view class='noshowdata' wx:if="{{noshowdata == 1}}">
