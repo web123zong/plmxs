@@ -1,13 +1,36 @@
 var a, e, i = getApp(), s = i.requirejs("core");
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
-
+    results:[],
+    key:'',
   },
-
+  bindInput:function(e){
+    this.setData({
+      key: e.detail.value
+    })
+  },
+  search:function(){
+    var that = this;
+    if (that.data.key == ''){
+      wx.showToast({
+        title: '请先输入型号',
+        icon:'none'
+      })
+      return
+    }
+    wx.showLoading({
+      title: '加载中',
+    })
+    s.get("merch/select_cate_get_goods", {
+      'keyword': that.data.key
+    }, function (t) {
+        wx.hideLoading();
+        console.log(t)
+    });
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -18,7 +41,6 @@ Page({
       
     });
   },
-
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
