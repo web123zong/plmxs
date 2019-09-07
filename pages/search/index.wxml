@@ -3,25 +3,25 @@
     <image src="https://plmxs.gzchujiao.com/attachment/images/1/2019/09/MA5xzTZxamvAzZ4Gcum8fvcf8GDvmD.jpg " mode="widthFix"></image>
   </view>
   <view class="search-input">
-    <view>——  按所属车的型号查找  ——</view>
+    <view>—— 按所属车的型号查找 ——</view>
     <view class="input-box">
       <input placeholder="请输入型号" value="{{key}}" bindinput="bindInput"></input>
       <text class="icox icox-search" bindtap="search"></text>
     </view>
   </view>
   <!-- 搜索结果 -->
-  <view class="search-res" wx:if="{{ results.length > 0}}">
-    <view class="res-item" wx:for="{{2}}">
-      <view class="item-title">奥迪A3 2014-1.4T低配</view>
-      <view class="item-detail"> 
-        <view class="detail-item">近光灯：H7</view>
-        <view class="detail-item">远光灯:</view>
-        <view class="detail-item">雾灯:</view>
-        <view class="detail-item">LED专用卡座：D05</view>
-        <view class="detail-item">LED解码：不需要</view>
-        <view class="detail-item">HID解码：需要</view>
-        <view class="detail-item">备注：空间小需要加长尾盖</view>
-         <navigator url="/pages/goods/detail/index?&id={{item.id}}" class="btn-buy">立即购买</navigator>
+  <view class="search-res">
+    <view class="res-item" wx:for="{{results}}" wx:key="{{index}}">
+      <view class="item-title">{{index}}</view>
+      <view class="item-detail" wx:if="{{item.length <= 0}}" style="color:#fff">
+        暂无数据
+      </view>
+      <view class="item-detail" wx:for="{{item}}" wx:for-item="oneitem" wx:key="index" wx:if="{{item.length > 0}}">
+        <view class="detail-item">{{oneitem.title}}</view>
+        <block wx:for="{{oneitem.param}}" wx:for-item="twoitem" wx:key="index">
+          <view class="detail-item">{{twoitem.title}}：{{twoitem.value}}</view>
+        </block>
+        <navigator url="/pages/goods/detail/index?&id={{oneitem.id}}" class="btn-buy">立即购买</navigator>
       </view>
     </view>
   </view>
