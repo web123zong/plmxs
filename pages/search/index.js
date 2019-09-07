@@ -13,7 +13,7 @@ Page({
    */
   onLoad: function (options) {
     s.get("merch/select_cate_get_goods", {
-      'keyword':'丰田'
+      'keyword':'GLA200'
     }, function (t) {
       
     });

@@ -18,7 +18,7 @@
       <view style='width:80%' class='flex-x-center flex-y-center'>
         <view class='newinput'>
           <image src="../../../static/images/search2.png" class='search' bindtap='serch'></image>
-          <input type="search" name="keyword" id="keyword" value="" bindinput='serchinput' placeholder="输入商户或地址搜索" />
+          <input type="search" name="keyword" id="keyword" value="{{keyword}}" bindinput='serchinput' placeholder="输入商户或地址搜索" />
         </view>
         <view bindtap='serch' style='margin-left:1%;font-size:29rpx;'>
           搜索

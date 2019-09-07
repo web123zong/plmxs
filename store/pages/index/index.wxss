@@ -59,7 +59,7 @@
   width: 100%;
   flex-wrap: wrap;
   overflow: hidden;
-  height: 50rpx;
+  height: 48rpx;
 	margin-top: 5rpx;
 }
 .school-span text{

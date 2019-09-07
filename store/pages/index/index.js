@@ -4,7 +4,7 @@ Page({
   data: {
     page: 1,
     isbottom: !1,
-    array: ['排序', '根据距离', '根据入驻时间'],
+    array: ['根据距离（默认）', '销量','评分'],
     index: 0,
     chooseschool: 0,
     city: '',
@@ -13,7 +13,8 @@ Page({
     indicatorDots: false,
     autoplay: true,
     interval: 5000,
-    duration: 1000
+    duration: 1000,
+    keyword:''
   },
   onPullDownRefresh: function () {
     var that = this;
@@ -32,6 +33,23 @@ Page({
         that.getmerch();
       }
     })
+  },
+  serchinput:function(e){
+    console.log(e.detail.value)
+    this.setData({
+      keyword:e.detail.value
+    })
+  },
+  serch:function(){
+    var that = this;
+    e.get("merch/ajaxmerchuser", {
+      'keyword': that.data.keyword,
+      'sorttype': that.data.lng
+    }, function (e) {
+      that.setData({
+        list: e.result.list
+      })
+    });
   },
   onReady: function() {},
   onShow: function() {},
