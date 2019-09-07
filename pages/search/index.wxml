@@ -21,7 +21,7 @@
         <view class="detail-item">LED解码：不需要</view>
         <view class="detail-item">HID解码：需要</view>
         <view class="detail-item">备注：空间小需要加长尾盖</view>
-         <navigator url="" class="btn-buy">立即购买</navigator>
+         <navigator url="/pages/goods/detail/index?&id={{item.id}}" class="btn-buy">立即购买</navigator>
       </view>
     </view>
   </view>
