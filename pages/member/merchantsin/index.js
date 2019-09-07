@@ -16,16 +16,18 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    a.get('merch/register_submit', {}, function(e) {
-      wx.showToast({
-        title: e.message,
-        icon:'none'
-      })
-      setTimeout(function() {
-        wx.switchTab({
-          url: '/pages/member/index/index',
+    a.get('merch/register_info', {}, function(e) {
+      if(e.code == 0){
+        wx.showToast({
+          title: e.message,
+          icon: 'none'
         })
-      }, 1500)
+        setTimeout(function () {
+          wx.switchTab({
+            url: '/pages/member/index/index',
+          })
+        }, 1500)
+      }
     })
   },
   // 提交表单

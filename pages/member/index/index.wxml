@@ -67,7 +67,7 @@
                 <view class="fui-cell-text">我的订单</view>
                 <view class="fui-cell-remark">查看全部订单</view>
             </navigator>
-            <view class="fui-icon-group col-{{iscycelbuy?5:4}} nomargin">
+            <view class="fui-icon-group col-4 nomargin">
                 <navigator class="fui-icon-col" hoverClass="none" openType="navigate" url="/pages/order/index?status=0">
                     <view class="badge" wx:if="{{member.statics.order_0>0}}">{{member.statics.order_0}}</view>
                     <text class="icox icox-payment"></text>
