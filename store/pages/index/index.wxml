@@ -9,11 +9,13 @@
   <!--顶部输入框-->
   <view class="docu-search flex-x-center flex-y-center">
     <view class="docu-input">
-      <view style='width:20%;border-right:1px solid #a3a3a3' class='flex-x-center flex-y-center'>
-        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" style='margin-right:10rpx'>
-          <view class="picker">{{array[index]}} </view>
-        </picker>
-        <image src='../../../static/images/arow_b.png' style='width:16rpx;height:14rpx;'></image>
+      <view style='width:20%;border-right:1px solid #a3a3a3;font-size:24rpx;' class='flex-x-center flex-y-center' bindtap="showsort">
+        <view class="type-content">{{array[sort]}}
+          <view class="types-li" wx:if="{{showsortmodal == 1}}">
+            <view wx:for="{{array}}" wx:key="index" data-index="{{index}}" class="tyli-item" bindtap="gosearch">{{item}}</view>
+          </view>
+        </view>
+        <image src='../../../static/images/arow_b.png' style='width:16rpx;height:14rpx;margin-left:5rpx'></image>
       </view>
       <view style='width:80%' class='flex-x-center flex-y-center'>
         <view class='newinput'>
@@ -44,8 +46,7 @@
       </view>
     </view>
   </navigator>
-</view>
-
-<view class='nodata flex-col flex-x-center flex-y-center' wx:if="{{isbottom}}">
-  <view style='color:#d2d2d2;font-size:12pt;padding-top:20rpx;text-align=center;' class='{{page==1?"isfirst-nodata":""}}'>{{page==1?'暂无相关数据':'已拉到底啦!'}}</view>
+  <view class='nodata flex-col flex-x-center flex-y-center' wx:if="{{isbottom}}">
+    <view style='color:#d2d2d2;font-size:10pt;padding-top:40rpx;text-align=center;'>{{page==1?'暂无相关数据':'已拉到底啦!'}}</view>
+  </view>
 </view>
