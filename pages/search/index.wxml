@@ -21,7 +21,7 @@
         <block wx:for="{{oneitem.param}}" wx:for-item="twoitem" wx:key="index">
           <view class="detail-item">{{twoitem.title}}：{{twoitem.value}}</view>
         </block>
-        <navigator url="/pages/goods/detail/index?&id={{oneitem.id}}" class="btn-buy">立即购买</navigator>
+        <!-- <navigator url="/pages/goods/detail/index?&id={{oneitem.id}}" class="btn-buy">立即购买</navigator> -->
       </view>
     </view>
   </view>
