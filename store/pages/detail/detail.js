@@ -79,7 +79,8 @@ Page({
           desc: e.merch_info.desc,
           lat: e.merch_info.lat,
           lng: e.merch_info.lng,
-          id: e.merch_info.id
+          id: e.merch_info.id,
+          thumb_desc:e.merch_info.thumb_desc
         })
         wx.setNavigationBarTitle({
           title: that.data.name

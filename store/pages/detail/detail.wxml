@@ -25,7 +25,7 @@
     </view>
   </view>
   <view class="detail-img">
-    <image src="https://plmxs.gzchujiao.com/attachment/images/1/2019/09/npT7xw6wL7PhjOtSTt7w8PHtbhn8hS.jpg" mode="widthFix"></image>
+    <image src="{{thumb_desc}}" mode="widthFix"></image>
   </view>
   <!-- 预约试听课程 -->
   <!-- <view class='coupons-main' wx:if="{{ishowgoods}}">
