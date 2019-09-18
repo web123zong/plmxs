@@ -17,11 +17,20 @@ Page({
         bargain: !1
     },
     onLoad: function(a) {
-        e.checkAuth(), this.setData({
-            options: a
-        });
+        // e.checkAuth(), this.setData({
+        //     options: a
+        // });
+      this.setData({
+        options: a
+      });
+    },
+    goLogin:function(){
+      e.checkAuth()
     },
     getInfo: function() {
+        // wx.redirectTo({
+        //   url: "/pages/message/auth/index"
+        // })
         var e = this;
         a.get("member", {}, function(a) {
             1 == a.isblack && wx.showModal({
@@ -30,8 +39,8 @@ Page({
                 success: function(a) {
                     a.confirm && e.close(), a.cancel && e.close();
                 }
-            }), 0 != a.error ? wx.redirectTo({
-                url: "/pages/message/auth/index"
+            }), 0 != a.error ? e.setData({
+              show: !0,
             }) : e.setData({
                 member: a,
                 show: !0,
@@ -46,7 +55,7 @@ Page({
         });
     },
     onShow: function() {
-        e.checkAuth();
+        // e.checkAuth();
         var a = this;
         this.getInfo(), wx.getSystemInfo({
             success: function(e) {

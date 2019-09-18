@@ -19,6 +19,11 @@ Page({
             title: t || "提示"
         });
     },
+    goself:function(){
+      wx.switchTab({
+        url: '/pages/member/index/index',
+      })
+    },
     bind: function() {
         var e = this, t = setInterval(function() {
             wx.getSetting({

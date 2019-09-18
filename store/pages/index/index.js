@@ -81,7 +81,7 @@ Page({
       'keyword': that.data.keyword,
       'sorttype': that.data.lng
     }, function (e) {
-      if (e.result.list > 0){
+      if (e.result.list.length > 0){
         that.setData({
           list: e.result.list
         }) 

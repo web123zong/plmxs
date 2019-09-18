@@ -17,7 +17,7 @@
         暂无数据
       </view>
       <view class="item-detail" wx:for="{{item}}" wx:for-item="oneitem" wx:key="index" wx:if="{{item.length > 0}}">
-        <view class="detail-item">{{oneitem.title}}</view>
+        <!-- <view class="detail-item">{{oneitem.title}}</view> -->
         <block wx:for="{{oneitem.param}}" wx:for-item="twoitem" wx:key="index">
           <view class="detail-item">{{twoitem.title}}：{{twoitem.value}}</view>
         </block>

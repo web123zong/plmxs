@@ -114,12 +114,6 @@
         "selectedIconPath": "static/images/tabbar/icon-1-active.png"
       },
       {
-        "pagePath": "pages/shop/caregory/index",
-        "text": "全部分类",
-        "iconPath": "static/images/tabbar/icon-2.png",
-        "selectedIconPath": "static/images/tabbar/icon-2-active.png"
-      },
-      {
         "pagePath": "activation/pages/index/index",
         "text": "质保激活",
         "iconPath": "static/images/tabbar/s-2.png",

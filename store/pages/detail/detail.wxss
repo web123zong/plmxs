@@ -1,7 +1,9 @@
 page {
     background: #f7f7f7;
 }
-
+.detail-img image{
+  width: 100%;
+}
 .top {
     height: 200rpx;
     position: relative;
