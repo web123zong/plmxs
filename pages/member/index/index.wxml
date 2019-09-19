@@ -189,6 +189,12 @@
           <text class="badge" wx:if="{{member.statics.cart>0}}">{{member.statics.cart}}</text>
         </view>
       </navigator>
+      <button class="fui-cell" hoverClass="none" open-type="contact" style="background:#fff;text-align:left">
+        <view class="fui-cell-icon">
+          <text class="icox icox-people"></text>
+        </view>
+        <view class="fui-cell-text">在线客服</view>
+      </button>
       <!-- <navigator class="fui-cell" hoverClass="none" openType="navigate" url="/pages/member/favorite/index">
         <view class="fui-cell-icon">
           <text class="icox icox-like1"></text>
