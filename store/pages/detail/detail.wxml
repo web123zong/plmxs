@@ -27,7 +27,6 @@
   <view class="detail-img">
     <image src="{{thumb_desc}}" mode="widthFix"></image>
   </view>
-  <!-- 预约试听课程 -->
   <!-- <view class='coupons-main' wx:if="{{ishowgoods}}">
     <view class='coupons-title flex-y-center'>
       <text>推荐商品</text>

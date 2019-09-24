@@ -1,5 +1,5 @@
 <import src="/utils/wxParse/wxParse.wxml"></import>
-<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style="height: 720rpx">
   <block wx:for="{{piclist}}">
     <swiper-item>
       <image src="{{item}}" class="slide-image" width="355" height="150" />
@@ -10,7 +10,25 @@
   <text>商品名称：{{title}}</text>
 </view>
 <view class="padding-xs">
+  <text>产品型号：{{model}}</text>
+</view>
+<view class="padding-xs">
   <text>商品价格：￥{{marketprice}}</text>
+</view>
+<view class="padding-xs">
+  <text>出厂日期：{{date}}</text>
+</view>
+<view class="padding-xs">
+  <text>销售区域：{{province}} {{city}} {{area}}</text>
+</view>
+<view class="padding-xs">
+  <text>质保联系电话：{{mobile}}</text>
+</view>
+<view class="padding-xs">
+  <text>质保售后地址：{{address_label}}</text>
+  <view bindtap="map">
+    <image src="../../../static/images/df_03.png" style='height:38rpx;width:41rpx'></image>
+  </view>
 </view>
 <view class="padding-xs">
   <view wx:if="{{goods_status==1}}">商品状态：
@@ -28,14 +46,21 @@
     <text>激活时间：{{usetime}}</text>
   </block>
 </view>
-<view class="padding-xs">
-  <block wx:if="{{status == 0}}">
-    <text>质保失效时间：未激活</text>
-  </block>
-  <block wx:else>
-    <text>质保失效时间：{{scraptime}}</text>
-  </block>
-</view>
+
+<block wx:if="{{status == 0}}">
+  <view class="padding-xs">
+    <text>质保到期日期：未激活</text>
+  </view>
+</block>
+<block wx:else>
+  <view class="padding-xs">
+    <text>质保剩余天数：{{surplus}} 天</text>
+  </view>
+  <view class="padding-xs">
+    <text>质保到期日期：{{scraptime}}</text>
+  </view>
+</block>
+
 <view wx:if="{{status == 0}}">
   <button type="primary" class="bind" bindtap="bind_activation">立即绑定激活</button>
 </view>

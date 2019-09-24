@@ -40,10 +40,19 @@ Page({
           sn: res.data.info.sn,
           goods_status: res.data.info.goods_status,
           status: res.data.info.status,
-          scraptime: res.data.info.scraptime,
+          surplus: res.data.info.surplus,
           usetime: res.data.info.usetime,
           title: res.data.info.title,
-          marketprice: res.data.info.marketprice
+          marketprice: res.data.info.marketprice,
+          map: res.data.info.map,
+          date: res.data.info.date,
+          model: res.data.info.model,
+          mobile: res.data.info.mobile,
+          address_label: res.data.info.address_label,
+          province: res.data.info.province,
+          area: res.data.info.area,
+          city: res.data.info.city,
+          scraptime: res.data.info.scraptime
         })
         l.wxParse("wxParseData", "html", res.data.info.content, that, "0")
       }
@@ -52,22 +61,36 @@ Page({
 
   bind_activation:function(){
     var that = this;
-    e.get("activation/bind_openid", {'sn':that.data.sn}, function (e) {
-       if(e.data.code==1){
+    e.get("activation/bind_openid", {'sn':that.data.sn}, function (res) {
+      if (res.code==1){
         wx.showToast({
-          title: '激活成功',
+          title: res.msg,
           icon:'success'
         })
          setTimeout(function () {
            wx.navigateTo({
-             url: 'activation/pages/index/index'
+             url: 'log/pages/integral/integral'
            })
          }, 1500)
+       }else{
+         wx.showToast({
+           title: res.msg,
+           icon: 'success'
+         })
        }
     });
 
   },
-
+  map: function (a) {
+    var t = this;
+    wx.openLocation({
+      latitude: parseFloat(t.data.map.lat),
+      longitude: parseFloat(t.data.map.lng),
+      name: t.data.address,
+      address: t.data.address,
+      scale: 28
+    });
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

@@ -20,7 +20,7 @@
       <view style='width:80%' class='flex-x-center flex-y-center'>
         <view class='newinput'>
           <image src="../../../static/images/search2.png" class='search' bindtap='serch'></image>
-          <input type="search" name="keyword" id="keyword" value="{{keyword}}" bindinput='serchinput' placeholder="输入商户或地址搜索" />
+          <input type="search" name="keyword" id="keyword" value="{{keyword}}" bindinput='serchinput' placeholder="请输入关键字搜索" />
         </view>
         <view bindtap='serch' style='margin-left:1%;font-size:29rpx;'>
           搜索
@@ -29,7 +29,7 @@
     </view>
   </view>
   <!--商户列表-->
-  <navigator class="item" url="/store/pages/detail/detail?id={{item.id}}" wx:for="{{list}}" wx:for-index="idx" wx:key="idx">
+  <view class="item" bindtap="goto_detail" data-id="{{item.id}}" wx:for="{{list}}" wx:for-index="idx" wx:key="idx">
     <view class='flex-row flex-x-center school-main'>
       <view class='school-img'>
         <image src="{{item.logo}}"></image>
@@ -45,7 +45,7 @@
         </view>
       </view>
     </view>
-  </navigator>
+  </view>
   <view class='nodata flex-col flex-x-center flex-y-center' wx:if="{{isbottom}}">
     <view style='color:#d2d2d2;font-size:10pt;padding-top:40rpx;text-align=center;'>{{page==1?'暂无相关数据':'已拉到底啦!'}}</view>
   </view>

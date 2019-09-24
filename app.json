@@ -121,7 +121,7 @@
       },
       {
         "pagePath": "store/pages/index/index",
-        "text": "门店列表",
+        "text": "周边导航",
         "iconPath": "static/images/tabbar/store.png",
         "selectedIconPath": "static/images/tabbar/store-2.png"
       },

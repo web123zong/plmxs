@@ -1,10 +1,11 @@
-var a = getApp() ,e = a.requirejs("core");
+var a = getApp(),
+  e = a.requirejs("core");
 
 Page({
   data: {
     page: 1,
     isbottom: !1,
-    array: ['距离', '销量','评分'],
+    array: ['距离', '销量', '评分'],
     chooseschool: 0,
     city: '',
     name: '',
@@ -13,30 +14,30 @@ Page({
     autoplay: true,
     interval: 5000,
     duration: 1000,
-    keyword:'',
-    sort:0,
-    showsortmodal:0,
+    keyword: '',
+    sort: 0,
+    showsortmodal: 0,
   },
-  showsort:function(){
-    if (this.data.showsortmodal == 0){
+  showsort: function() {
+    if (this.data.showsortmodal == 0) {
       this.setData({
-        showsortmodal:1,
+        showsortmodal: 1,
       })
-    }else{
+    } else {
       this.setData({
-        showsortmodal:0,
+        showsortmodal: 0,
       })
     }
   },
-  onPullDownRefresh: function () {
+  onPullDownRefresh: function() {
     var that = this;
     that.setData({
-      list:'',
-      sort:0,
+      list: '',
+      sort: 0,
       showsortmodal: 0,
       list: [],
-      page:1,
-      isbottom:false,
+      page: 1,
+      isbottom: false,
     })
     that.getmerch();
   },
@@ -54,50 +55,50 @@ Page({
       }
     })
   },
-  gosearch:function(e){
+  gosearch: function(e) {
     this.setData({
-      page:1,
+      page: 1,
       sort: e.currentTarget.dataset.index,
-      list:[],
+      list: [],
       isbottom: false,
     })
     this.getmerch();
   },
-  serchinput:function(e){
+  serchinput: function(e) {
     this.setData({
-      keyword:e.detail.value
+      keyword: e.detail.value
     })
   },
-  serch:function(){
+  serch: function() {
     var that = this;
     that.setData({
-      sort:0,
+      sort: 0,
       showsortmodal: 0,
       list: [],
       page: 1,
-      isbottom: false,  
+      isbottom: false,
     })
     e.get("merch/ajaxmerchuser", {
       'keyword': that.data.keyword,
       'sorttype': that.data.lng
-    }, function (e) {
-      if (e.result.list.length > 0){
+    }, function(e) {
+      if (e.result.list.length > 0) {
         that.setData({
           list: e.result.list
-        }) 
-      }else{
+        })
+      } else {
         that.setData({
-          isbottom:true
+          isbottom: true
         })
       }
-     
+
     });
   },
   onReady: function() {},
   onShow: function() {},
   onHide: function() {},
   onUnload: function() {},
-  onReachBottom: function () {
+  onReachBottom: function() {
     this.getmerch();
   },
   getmerch: function() {
@@ -106,19 +107,19 @@ Page({
       'lat': that.data.lat,
       'lng': that.data.lng,
       'page': that.data.page,
-      'sort':that.data.sort,
+      'sort': that.data.sort,
       'keyword': that.data.keyword,
     }, function(e) {
       wx.stopPullDownRefresh();
-      if(e.result.list.length > 0){
+      if (e.result.list.length > 0) {
         that.setData({
           list: that.data.list.concat(e.result.list),
+          is_openmerch_detail: e.result.option.is_openmerch_detail,
           showsortmodal: 0,
         })
-      }else{
-      console.log(111)
+      } else {
         that.setData({
-          isbottom:true
+          isbottom: true
         })
       }
     });
@@ -127,13 +128,21 @@ Page({
       page: page
     })
   },
-  getswipe:function(){
+  getswipe: function() {
     var that = this;
     console.log(that.data, 1010);
-    e.get("merch/swipe", {}, function (e) {
+    e.get("merch/swipe", {}, function(e) {
       that.setData({
-        swipe:e.category_swipe
+        swipe: e.category_swipe
       })
     });
+  },
+  goto_detail: function(e) {
+    var is_openmerch_detail = this.data.is_openmerch_detail;
+    if (is_openmerch_detail != 0) {
+      wx.navigateTo({
+        url: "/store/pages/detail/detail?id=" + e.currentTarget.dataset.id
+      })
+    }
   }
 });
