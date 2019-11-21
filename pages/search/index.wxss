@@ -19,15 +19,17 @@ page{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 60rpx;
-  line-height: 60rpx;
+  height: 80rpx;
+  line-height: 80rpx;
 }
 .input-placeholder{
   color: #fff;
 }
 .input-box .icox-search{
   display: block;
-  width: 60rpx;
+  width: 80rpx;
+  height: 80rpx;
+  line-height: 80rpx;
   text-align: center;
   background: #fff;
   color: #007afc;

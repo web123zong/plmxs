@@ -6,14 +6,17 @@
     </swiper-item>
   </block>
 </swiper>
-<view class="padding-xs">
+<!-- <view class="padding-xs">
   <text>商品名称：{{title}}</text>
-</view>
+</view> -->
 <view class="padding-xs">
   <text>产品型号：{{model}}</text>
 </view>
-<view class="padding-xs">
+<!-- <view class="padding-xs">
   <text>商品价格：￥{{marketprice}}</text>
+</view> -->
+<view class="padding-xs">
+  <text>产品编码：{{sn}}</text>
 </view>
 <view class="padding-xs">
   <text>出厂日期：{{date}}</text>
@@ -30,17 +33,17 @@
     <image src="../../../static/images/df_03.png" style='height:38rpx;width:41rpx'></image>
   </view>
 </view>
-<view class="padding-xs">
+<!-- <view class="padding-xs">
   <view wx:if="{{goods_status==1}}">商品状态：
     <view class="top">上架</view>
   </view>
   <view wx:elif="{{goods_status==0}}">商品状态：
     <view class="bottom">下架</view>
   </view>
-</view>
+</view> -->
 <view class="padding-xs">
   <block wx:if="{{status == 0}}">
-    <text>激活时间：未激活</text>
+    <!-- <text>激活时间：未激活</text> -->
   </block>
   <block wx:else>
     <text>激活时间：{{usetime}}</text>
@@ -48,13 +51,13 @@
 </view>
 
 <block wx:if="{{status == 0}}">
-  <view class="padding-xs">
+  <!-- <view class="padding-xs">
     <text>质保到期日期：未激活</text>
-  </view>
+  </view> -->
 </block>
 <block wx:else>
   <view class="padding-xs">
-    <text>质保剩余天数：{{surplus}} 天</text>
+    <text>质保剩余天数：{{surplus}} 天 / {{sy_time}}</text>
   </view>
   <view class="padding-xs">
     <text>质保到期日期：{{scraptime}}</text>
@@ -62,7 +65,11 @@
 </block>
 
 <view wx:if="{{status == 0}}">
-  <button type="primary" class="bind" bindtap="bind_activation">立即绑定激活</button>
+  <view class="padding-xs">
+    <text>质保时间：自安装之日起{{years}}个月免费保修</text>
+  </view>
+  <!-- <button type="primary" class="bind" bindtap="bind_activation">立即绑定激活</button> -->
+  <button type="primary" class="bind" bindtap="show_activation">立即绑定激活</button>
 </view>
 
 <view class="content">
@@ -72,4 +79,24 @@
   <view class="wxParse">
     <template is="wxParse" data="{{wxParseData:wxParseData.nodes}}"></template>
   </view>
+</view>
+
+<!-- 弹窗 -->
+<view class="zan-dialog {{ showDialog ? 'zan-dialog--show' : '' }}" catchtouchmove="true">
+ <view class="zan-dialog__mask" bindtap="toggleDialog" />
+ <view class="zan-dialog__container">
+  <view class="input-title">为了提供更好的服务，请您填写以下信息</view>
+  <view class="input-wrap">
+    <view class="input-item">
+      <text>车主姓名：</text><input class="input-info" data-name="c_name" value="{{c_name}}" bindinput="inputTap"></input>
+    </view>
+    <view class="input-item">      
+      <text>联系电话：</text><input class="input-info" data-name="c_mobile" value="{{c_mobile}}" bindinput="inputTap"></input>
+    </view>
+    <view class="input-item">      
+      <text>汽车型号年份：</text><input class="input-info" data-name="c_year" bindinput="inputTap"></input>
+    </view>
+    <view class="sub-btn" catchtap="bind_activation">立即激活</view>
+  </view>
+ </view>
 </view>

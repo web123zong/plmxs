@@ -1,4 +1,4 @@
-<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style="height:450rpx">
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style="height:400rpx">
   <block wx:for="{{swipe}}">
     <swiper-item>
       <image src="{{item}}" class="slide-image" width="355" height="150" />
@@ -9,7 +9,7 @@
   <!--顶部输入框-->
   <view class="docu-search flex-x-center flex-y-center">
     <view class="docu-input">
-      <view style='width:20%;border-right:1px solid #a3a3a3;font-size:24rpx;' class='flex-x-center flex-y-center' bindtap="showsort">
+      <view style='width:20%;border-right:1px solid #a3a3a3;font-size:32rpx;' class='flex-x-center flex-y-center' bindtap="showsort">
         <view class="type-content">{{array[sort]}}
           <view class="types-li" wx:if="{{showsortmodal == 1}}">
             <view wx:for="{{array}}" wx:key="index" data-index="{{index}}" class="tyli-item" bindtap="gosearch">{{item}}</view>
@@ -20,9 +20,9 @@
       <view style='width:80%' class='flex-x-center flex-y-center'>
         <view class='newinput'>
           <image src="../../../static/images/search2.png" class='search' bindtap='serch'></image>
-          <input type="search" name="keyword" id="keyword" value="{{keyword}}" bindinput='serchinput' placeholder="请输入关键字搜索" />
+          <input type="search" name="keyword" id="keyword" value="{{keyword}}" bindinput='serchinput' placeholder="请输入关键字搜索" style="height:80rpx"/>
         </view>
-        <view bindtap='serch' style='margin-left:1%;font-size:29rpx;'>
+        <view bindtap='serch' style='margin-left:2%;font-size:32rpx;'>
           搜索
         </view>
       </view>

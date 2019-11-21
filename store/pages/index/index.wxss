@@ -1,8 +1,8 @@
 .docu-search{width:100%;height:80rpx;z-index:20;justify-content: flex-start;align-items:center;background: #fff;}
 .docu-search .text-search{display:none;font-size:13px;color:#5f646e;margin-left:2%;}
-.docu-search .docu-input{transition: all .2s linear;width:100%;height:65rpx;display:flex;justify-content: center;align-items:center;background:#FFFFFF;}
+.docu-search .docu-input{transition: all .2s linear;width:100%;height:100rpx;display:flex;justify-content: center;align-items:center;background:#FFFFFF;padding-top: 10rpx}
 .search{width:30rpx;height:29rpx;margin-left:2%;}
-.docu-search .docu-input input{-webkit-appearance:none;padding-left:3%;width:100%;border:0;height:100%;font-size:13px;}
+.docu-search .docu-input input{-webkit-appearance:none;padding-left:3%;width:100%;border:0;font-size:13px;}
 .newinput{background: #F0EFF4;display: flex;width:75%;align-items: center;border-radius:10rpx;}
 .select{width:15%;border:0;background:transparent;font-size:13px;-webkit-appearance: none;border-right:1px solid #a3a3a3;padding-right: 20rpx;}
 .school-main{

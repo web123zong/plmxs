@@ -37,7 +37,7 @@ Page({
             if (1 == t.data.page) {
                 e.isopen = a.isopen;
                 var i = "充值记录";
-                1 == a.isopen && (i = a.moneytext + "明细"), wx.setNavigationBarTitle({
+                1 == a.isopen && (i = a.moneytext + "/积分明细"), wx.setNavigationBarTitle({
                     title: i
                 });
             }

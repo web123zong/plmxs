@@ -143,6 +143,8 @@ Page({
       wx.navigateTo({
         url: "/store/pages/detail/detail?id=" + e.currentTarget.dataset.id
       })
+    }else{
+      
     }
   }
 });

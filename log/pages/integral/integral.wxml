@@ -1,15 +1,46 @@
 <view class='page'>
   <view class='intergral-items' wx:for="{{list}}">
     <view class='intergral-item flex-x-center flex-pack-justify'>
-      <image src="{{item.thumb}}"></image>
-      <view class='flex-col'>
-        <text>{{item.title}}</text>
-        <text class='intergral-time'>激活时间：{{item.usetime}}</text>
-        <text class='intergral-time'>到期时间：{{item.scraptime}}</text>
+      <view class="item-wrap" catchtap="moreInfoTap" data-id="{{item.id}}" data-idx="{{index}}" data-show="{{item.show}}">
+        <image src="{{item.thumb}}"></image>
+        <view class='flex-col'>
+          <text style="font-size:28rpx">{{item.model}}</text>
+          <text class='intergral-time'>质保剩余时间：{{item.surplus}}天 / {{item.sytime}}天</text>
+        </view>
       </view>
-      <view class='flex-y-center '>
+      <view class="item-more" wx:if="{{item.show==1}}">
+        <view class="more-wrap">
+          <text class="more-title">质保剩余：</text>
+          <text class="more-val">{{item.sytime}}天</text>
+        </view>
+        <view class="more-wrap">
+          <text class="more-title">产品型号：</text>
+          <text class="more-val">{{item.model}}</text>
+        </view>
+        <view class="more-wrap">
+          <text class="more-title">出厂日期：</text>
+          <text class="more-val">{{item.date}}</text>
+        </view>
+        <view class="more-wrap">
+          <text class="more-title">质保时间：</text>
+          <text class="more-val">{{item.years}}个月</text>
+        </view>
+        <view class="more-wrap">
+          <text class="more-title">销售区域：</text>
+          <text class="more-val">{{item.province}} {{item.city}} {{item.area}}</text>
+        </view>
+        <view class="more-wrap">
+          <text class="more-title">售后联系：</text>
+          <text class="more-val">{{item.mobile}}</text>
+        </view>
+        <view class="more-wrap">
+          <text class="more-title">产品编码：</text>
+          <text class="more-val">{{item.sn}}</text>
+        </view>
+      </view>
+      <!-- <view class='flex-y-center '>
         <text class='reduce'>价格：{{item.marketprice}}</text>
-      </view>
+      </view> -->
 
       <view class='noshowdata' wx:if="{{noshowdata == 1}}">
         暂时没有更多数据了！

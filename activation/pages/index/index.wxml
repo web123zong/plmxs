@@ -1,6 +1,5 @@
 <!--pages/activation/index/index.wxml-->
 <view id="pages">
-  <view id="title">好车灯不将就</view>
   <view id="honorific">
     <view class="text">亲爱的客户:</view>
   </view>

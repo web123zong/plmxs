@@ -41,9 +41,11 @@ Page({
                 }
             }), 0 != a.error ? e.setData({
               show: !0,
+              nologin:0
             }) : e.setData({
                 member: a,
                 show: !0,
+                nologin: 1,
                 customer: a.customer,
                 customercolor: a.customercolor,
                 phone: a.phone,

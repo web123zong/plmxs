@@ -4,11 +4,21 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
-		"newFeature": true
+		"newFeature": true,
+		"coverView": true,
+		"autoAudits": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.6.2",
@@ -38,7 +48,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
+			"current": 11,
 			"list": [
 				{
 					"id": -1,
@@ -108,6 +118,19 @@
 					"name": "搜索页面",
 					"pathName": "pages/search/index",
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "log/pages/integral/integral",
+					"pathName": "log/pages/integral/integral",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "提现中心",
+					"pathName": "pages/member/withdraw/index",
 					"scene": null
 				}
 			]

@@ -91,7 +91,29 @@ Page({
       }
     });
   },
-
+  moreInfoTap:function(e){
+    var that = this
+    var list = that.data.list
+    var idx = e.currentTarget.dataset.idx
+    var id = e.currentTarget.dataset.id
+    var show = e.currentTarget.dataset.show
+    console.log(list)
+    console.log(list.lenght)
+    for (let i in list) {
+      list[i].show = 0
+      console.log(i, list[i].show)
+    }
+    
+    console.log(list)
+    if(show == 1){
+      list[idx].show = 0
+    }else{
+      list[idx].show = 1
+    }
+    that.setData({
+      list:list
+    })
+  },
   /**
    * 用户点击右上角分享
    */

@@ -5,7 +5,7 @@
   <view class="search-input">
     <view>—— 按所属车的型号查找 ——</view>
     <view class="input-box">
-      <input placeholder="请输入型号" value="{{key}}" bindinput="bindInput"></input>
+      <input placeholder="请输入型号" value="{{key}}" bindinput="bindInput" style="height:80rpx"></input>
       <text class="icox icox-search" bindtap="search"></text>
     </view>
   </view>

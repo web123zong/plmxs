@@ -6,7 +6,11 @@ Page({
    * 页面的初始数据
    */
   data: {
-    sn: ''
+    sn: '',
+    indicatorDots: false,
+    autoplay: true,
+    interval: 5000,
+    duration: 1000
   },
 
   /**
