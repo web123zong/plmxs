@@ -136,8 +136,8 @@ App({
     },
     globalData: {
       appid: "wxdbe4e1b424e1fc04",
-      api: "https://plmxs.gzchujiao.com/app/ewei_shopv2_api.php?i=1",
-      approot: "https://plmxs.gzchujiao.com/addons/ewei_shopv2/",
+      api: "https://wx.maybac.cn/app/ewei_shopv2_api.php?i=1",
+      approot: "https://wx.maybac.cn/addons/ewei_shopv2/",
         userInfo: null
     }
 });
