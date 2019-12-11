@@ -8,7 +8,7 @@
 }
 
 .qrcode .fui-card {
-    background: #fe924a;
+    background: #2a65e8;
     color: #fff;
     box-shadow: 0 0.1rem 0.1rem rgba(204,204,204,0.3);
     border: 1px solid #ccc;

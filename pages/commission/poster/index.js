@@ -37,10 +37,19 @@ Page({
                 a.toast(t, e.message);
             }
         });
+
+
     },
-    onshow: function() {
-        this.setData({
+    onShow: function() {
+        var o = this;
+        o.setData({
             index: 0
+        });
+        e.get("commission/qrcode", {}, function (e) {
+          console.log(e,11);
+          70001 != e.error ? (e.show = !0, o.setData(e), o.getImage()) : wx.redirectTo({
+            url: "/pages/member/info/index"
+          });
         });
     },
     savePicture: function() {

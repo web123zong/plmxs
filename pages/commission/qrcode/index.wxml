@@ -6,10 +6,10 @@
                 <br></br>正在生成海报，请稍后...</view>
         </view>
     </view>
-    <view class="qrcode-img" wx:if="{{showimage}}">
+    <!-- <view class="qrcode-img" wx:if="{{showimage}}">
         <image mode="widthFix" src="{{img}}"></image>
-    </view>
-    <view class="fui-title">{{set['qrcode_title']==''?'如何赚钱':set['qrcode_title']}}</view>
+    </view> -->
+    <view class="fui-title">{{set['qrcode_title']==''?'如何获取推广佣金':set['qrcode_title']}}</view>
     <view class="fui-list-group">
         <view wx:if="{{set['qrcode']==''||set['qrcode']!=''&&set['qrcode_content']==''}}">
             <view class="fui-list">

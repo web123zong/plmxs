@@ -19,7 +19,7 @@ page{
 }
 
 #honorific .text {
-  font-size: 25rpx;
+  font-size: 30rpx;
   color: #dd4822;
 }
 

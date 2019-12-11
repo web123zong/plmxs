@@ -256,7 +256,11 @@ Page({
         });
     },
     bindback: function() {
-        wx.navigateBack();
+      // wx.navigateBack();
+      this.setData({
+        fromsearch:!1
+      })  
+      this.getList()
     },
     bindnav: function(t) {
         var e = a.trim(t.currentTarget.dataset.text), s = this.data.defaults;

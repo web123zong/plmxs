@@ -23,7 +23,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.6.2",
 	"appid": "wxdbe4e1b424e1fc04",
-	"projectname": "%E6%99%AE%E7%BD%97%E7%B1%B3%E4%BF%AE%E6%96%AF",
+	"projectname": "wxapp",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
@@ -45,6 +45,10 @@
 		},
 		"game": {
 			"currentL": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
 			"list": []
 		},
 		"miniprogram": {
@@ -131,6 +135,28 @@
 					"id": -1,
 					"name": "提现中心",
 					"pathName": "pages/member/withdraw/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 12,
+					"name": "pages/commission/qrcode/index",
+					"pathName": "pages/commission/qrcode/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/commission/poster/index",
+					"pathName": "pages/commission/poster/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/search/index",
+					"pathName": "pages/search/index",
+					"query": "",
 					"scene": null
 				}
 			]

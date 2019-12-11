@@ -22,13 +22,13 @@
   <text>出厂日期：{{date}}</text>
 </view>
 <view class="padding-xs">
-  <text>销售区域：{{province}} {{city}} {{area}}</text>
+  <text>仅限销售区域：{{province}} {{city}} {{area}}</text>
 </view>
 <view class="padding-xs">
-  <text>质保联系电话：{{mobile}}</text>
+  <text>售后联系：{{mobile}}</text>
 </view>
 <view class="padding-xs">
-  <text>质保售后地址：{{address_label}}</text>
+  <text>售后地址：{{address_label}}</text>
   <view bindtap="map">
     <image src="../../../static/images/df_03.png" style='height:38rpx;width:41rpx'></image>
   </view>
@@ -57,7 +57,7 @@
 </block>
 <block wx:else>
   <view class="padding-xs">
-    <text>质保剩余天数：{{surplus}} 天 / {{sy_time}}</text>
+    <text>质保剩余天数：{{sy_time}} 天 / {{surplus}}</text>
   </view>
   <view class="padding-xs">
     <text>质保到期日期：{{scraptime}}</text>

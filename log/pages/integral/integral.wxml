@@ -5,7 +5,7 @@
         <image src="{{item.thumb}}"></image>
         <view class='flex-col'>
           <text style="font-size:28rpx">{{item.model}}</text>
-          <text class='intergral-time'>质保剩余时间：{{item.surplus}}天 / {{item.sytime}}天</text>
+          <text class='intergral-time'>质保剩余:{{item.sytime}}天 / 质保期:{{item.surplus}}天</text>
         </view>
       </view>
       <view class="item-more" wx:if="{{item.show==1}}">
@@ -22,11 +22,11 @@
           <text class="more-val">{{item.date}}</text>
         </view>
         <view class="more-wrap">
-          <text class="more-title">质保时间：</text>
+          <text class="more-title">质保时长：</text>
           <text class="more-val">{{item.years}}个月</text>
         </view>
         <view class="more-wrap">
-          <text class="more-title">销售区域：</text>
+          <text class="more-title">仅限销售区域：</text>
           <text class="more-val">{{item.province}} {{item.city}} {{item.area}}</text>
         </view>
         <view class="more-wrap">

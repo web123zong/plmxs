@@ -225,14 +225,14 @@
         <view class="fui-cell-icon">
           <text class="icox icox-details"></text>
         </view>
-        <view class="fui-cell-text">{{member.moneytext}}/金币提现</view>
+        <view class="fui-cell-text">{{member.moneytext}}/积分提现</view>
         <view class="fui-cell-remark"></view>
       </navigator>
       <navigator class="fui-cell" hoverClass="none" openType="navigate" url="/pages/member/log/index">
         <view class="fui-cell-icon">
           <text class="icox icox-details"></text>
         </view>
-        <view class="fui-cell-text">余额/金币明细</view>
+        <view class="fui-cell-text">余额/积分明细</view>
         <view class="fui-cell-remark"></view>
       </navigator>
     </view>

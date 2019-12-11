@@ -13,7 +13,8 @@
     </button>
     <navigator class="nav-item external" openType="switchTab" url="/pages/index/index?merchid={{goods.merchid}}">
         <view class="icox icox-shop1"></view>
-        <view class="label">店铺</view>
+        <view class="label">首页
+    </view>
     </navigator>
     <view bindtap="menucart" class="nav-item cart-item" id="menucart">
         <view class="badge {{goods.cartount<=0?'out':'in'}}" wx:if="{{goods.cartcount&&limits}}">{{goods.cartcount}}</view>

@@ -1,8 +1,8 @@
 page {
-    height: 100%;
+    /* min-height: 100%; */
     background: #fff;
     -webkit-overflow-scrolling: touch;
-    position: fixed;
+    /* position: fixed; */
     top: 0;
     right: 0;
     bottom: 0;
@@ -13,14 +13,14 @@ page {
 .poster {
     background: #fffbec;
     padding-top: 90rpx;
-    height: 946rpx;
+    min-height: 600rpx;
     position: relative;
     width: 100%;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .posterimg {
-    height: 855rpx;
+    height: 600rpx;
     display: block;
     position: relative;
     float: left;
@@ -231,6 +231,18 @@ page {
     height: 52rpx;
     float: right;
     margin: 24rpx 25rpx 0 12rpx;
+}
+
+.fui-card {
+    background: #2a65e8;
+    color: #fff;
+    box-shadow: 0 0.1rem 0.1rem rgba(204,204,204,0.3);
+    border: 1px solid #ccc;
+    margin: 20rpx;
+    position: relative;
+    border-radius: 6rpx;
+    font-size: 30rpx;
+    padding: 20rpx;
 }
 
 .loading {

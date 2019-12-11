@@ -114,6 +114,12 @@
         "selectedIconPath": "static/images/tabbar/icon-1-active.png"
       },
       {
+        "pagePath": "pages/goods/index/index",
+        "text": "我的商城",
+        "iconPath": "static/images/tabbar/icon-44.png",
+        "selectedIconPath": "static/images/tabbar/icon-44-active.png"
+      },
+      {
         "pagePath": "activation/pages/index/index",
         "text": "质保激活",
         "iconPath": "static/images/tabbar/s-2.png",
@@ -121,7 +127,7 @@
       },
       {
         "pagePath": "store/pages/index/index",
-        "text": "周边导航",
+        "text": "附近门店",
         "iconPath": "static/images/tabbar/store.png",
         "selectedIconPath": "static/images/tabbar/store-2.png"
       },

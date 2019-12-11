@@ -136,7 +136,7 @@ Page({
         // 接口调用失败
         wx.showToast({
           icon: 'none',
-          title: '接口调用失败！'
+          title: '二维码扫描失败！'
         })
       },
       complete: res => {
