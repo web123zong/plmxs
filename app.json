@@ -93,7 +93,17 @@
     "store/pages/index/index",
     "store/pages/detail/detail",
     "log/pages/integral/integral",
-    "pages/member/merchantsin/index"
+    "pages/member/merchantsin/index",
+    "pages/commission/poster/index",
+    "pages/commission/qrcode/index",
+    "pages/commission/index",
+    "pages/commission/log/index",
+    "pages/commission/log/detail",
+    "pages/commission/down/index",
+    "pages/commission/apply/index",
+    "pages/commission/withdraw/index",
+    "pages/commission/order/index",
+    "pages/commission/register/index"
   ],
   "window": {
     "backgroundColor": "#fafafa",
